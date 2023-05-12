@@ -2,6 +2,8 @@
 	--clr-grey-1: hsl(209, 61%, 16%);
 	--clr-grey-2: hsl(210, 36%, 96%);
 	--clr-primary: hsl(205, 78%, 60%);
+	--clr-primary-1: hsl(205, 100%, 96%);
+	--clr-red-dark: hsl(360, 67%, 44%);
 	--clr-black: #222;
 	--clr-white: #fff;
 	--transition: all 0.3s linear;
@@ -29,6 +31,60 @@ body {
 	line-height: 1.5;
 	font-size: 0.875rem;
 }
+h1,
+h2,
+h4 {
+	letter-spacing: var(--spacing);
+	text-transform: capitalize;
+	line-height: 1.25;
+	margin-bottom: 0.75rem;
+}
+
+h4 {
+	font-size: 0.875rem;
+}
+p {
+	margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 800px) {
+	h1 {
+		font-size: 4rem;
+	}
+	h2 {
+		font-size: 2.5rem;
+	}
+	h4 {
+		font-size: 1rem;
+	}
+	body {
+		font-size: 1rem;
+	}
+	h1,
+	h2,
+	h4 {
+		line-height: 1;
+	}
+}
+@media screen and (min-width: 992px) {
+	.section {
+		width: 95vw;
+	}
+}
+.btn {
+	background: var(--clr-primary);
+	display: inline-block;
+	padding: 0.25rem 0.5rem;
+	border-radius: var(--radius);
+	text-transform: capitalize;
+	color: var(--clr-white);
+	letter-spacing: var(--spacing);
+	border-color: transparent;
+	cursor: pointer;
+	margin-top: 2rem;
+	font-size: 1.2rem;
+}
+
 main {
 	width: 90vw;
 	max-width: var(--fixed-width);
@@ -62,4 +118,42 @@ main {
 	object-fit: cover;
 	border-top-right-radius: var(--radius);
 	border-top-left-radius: var(--radius);
+}
+.tour-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+.tour-info h4 {
+	margin-bottom: 0;
+}
+.single-tour button {
+	background: transparent;
+	border-color: transparent;
+	text-transform: capitalize;
+	color: var(--clr-primary-5);
+	font-size: 1rem;
+	cursor: pointer;
+	padding-left: 0.25rem;
+}
+.tour-price {
+	color: var(--clr-primary);
+	background: var(--clr-primary-1);
+	padding: 0.25rem 0.5rem;
+	border-radius: var(--radius);
+}
+.single-tour footer {
+	padding: 1.5rem 2rem;
+}
+.single-tour .delete-btn {
+	display: block;
+	width: 200px;
+	margin: 1rem auto 0 auto;
+	color: var(--clr-red-dark);
+	letter-spacing: var(--spacing);
+	background: transparent;
+	border: 1px solid var(--clr-red-dark);
+	padding: 0.25rem 0.5rem;
+	border-radius: var(--radius);
 }
